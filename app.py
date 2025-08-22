@@ -8,12 +8,12 @@ from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "https://smos-store.vercel.app"}})
 
-# Telegram
+
 token = "8420874385:AAG89KOYSxNNtLQCqrT3Uwtc3U6IxKhikoQ"
 chatId = "1084261917"
 url = f"https://api.telegram.org/bot{token}/sendMessage"
 
-# email
+
 port = 465
 smtp_server = "smtp.gmail.com"
 sender_email = "rornsokhengnaa@gmail.com"
