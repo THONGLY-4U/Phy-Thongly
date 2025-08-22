@@ -91,7 +91,6 @@ def create_order():
     payment = data.get("payment", {}).get("method", "")
     items = data.get("items", [])
 
-    # Telegram message
     message = (
         f"<b>🛒 ទទួលបានការបញ្ជាទិញថ្មី</b>\n"
         f"<b>ឈ្មោះ៖</b> {name}\n"
