@@ -23,12 +23,11 @@ password = "wadl utfb agpx mnih"
 @app.get("/")
 @app.get("/home")
 def home():
-    from data import products
-    product_list = products
-    # api_url = 'https://fakestoreapi.com/products'
-    # r = requests.get(api_url)
-    # if r.status_code == 200:
-    #     product_list = r.json()
+    product_list = []
+    api_url = 'https://fakestoreapi.com/products'
+    r = requests.get(api_url)
+    if r.status_code == 200:
+        product_list = r.json()
     return render_template('home.html', product_list=product_list)
 
 
