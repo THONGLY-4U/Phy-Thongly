@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://fakestoreapi.com"}})
+CORS(app, resources={r"/*": {"origins": ["https://smos-store.vercel.app", "https://fakestoreapi.com"]}})
 
 
 token = "8420874385:AAG89KOYSxNNtLQCqrT3Uwtc3U6IxKhikoQ"
@@ -23,11 +23,12 @@ password = "wadl utfb agpx mnih"
 @app.get("/")
 @app.get("/home")
 def home():
-    product_list = []
-    api_url = 'https://fakestoreapi.com/products'
-    r = requests.get(api_url)
-    if r.status_code == 200:
-        product_list = r.json()
+    from data import products
+    product_list = products
+    # api_url = 'https://fakestoreapi.com/products'
+    # r = requests.get(api_url)
+    # if r.status_code == 200:
+    #     product_list = r.json()
     return render_template('home.html', product_list=product_list)
 
 
