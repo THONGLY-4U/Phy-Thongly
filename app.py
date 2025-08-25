@@ -9,15 +9,15 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": ["https://smos-store.vercel.app", "https://fakestoreapi.com"]}})
 
 
-token = "8420874385:AAG89KOYSxNNtLQCqrT3Uwtc3U6IxKhikoQ"
-chatId = "1084261917"
+token = "8244201597:AAHiSl5lpd5lrKo16xzo9DKQGeq2t1rcOWs"
+chatId = "5866058317"
 url = f"https://api.telegram.org/bot{token}/sendMessage"
 
 
 port = 465
 smtp_server = "smtp.gmail.com"
-sender_email = "rornsokhengnaa@gmail.com"
-password = "wadl utfb agpx mnih"
+sender_email = "thonglyphy19@gmail.com"
+password = "drom lcxx shbj naoe"
 
 
 @app.get("/")
