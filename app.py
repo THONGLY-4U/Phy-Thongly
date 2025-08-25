@@ -32,10 +32,10 @@ def home():
     return render_template('home.html', product_list=product_list)
 
 
-@app.get("/product-detail")
+@app.get("/product-detail/<int:pro_id>")
 def product_detail(pro_id):
     from product import products, getByID  
-    pro_id=request.args.get('pro_id', type=int )
+    
     product = getByID(pro_id)             
     # api_url = f"https://fakestoreapi.com/products/{pro_id}"
     # r = requests.get(api_url)
